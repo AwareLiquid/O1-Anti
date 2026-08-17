@@ -1,0 +1,19 @@
+[e12] run2b: all-attn ceiling at lr=1e-3 (instability diagnostic)
+Using the latest cached version of the dataset since Salesforce/wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'wikitext-2-raw-v1' at C:\Users\ASUS\.cache\huggingface\datasets\Salesforce___wikitext\wikitext-2-raw-v1\0.0.0\b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Sun May 24 03:03:50 2026).
+Using the latest cached version of the dataset since Salesforce/wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'wikitext-2-raw-v1' at C:\Users\ASUS\.cache\huggingface\datasets\Salesforce___wikitext\wikitext-2-raw-v1\0.0.0\b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Sun May 24 03:03:50 2026).
+E8 real-text LM | device=cpu data=wikitext seq=128 d_model=128 steps=1500
+corpus: 10,914,845 train bytes / 1,144,248 val bytes
+
+[O1-Anti] active LM params ~597,394 (token MoE 1/6 experts × 3 layers, hybrid attn every 1; gen stack excluded)
+  step 250/1500  train 2.956  val nats 2.932  bpb 4.229
+  step 500/1500  train 2.694  val nats 2.773  bpb 4.001
+  step 750/1500  train 2.702  val nats 2.707  bpb 3.905
+  step 1000/1500  train 2.609  val nats 2.643  bpb 3.814
+  step 1250/1500  train 2.645  val nats 2.606  bpb 3.759
+  step 1500/1500  train 2.578  val nats 2.560  bpb 3.694
+
+model       val bits/byte        params   train s
+O1-Anti             3.700       597,394     500.2
+exit=0

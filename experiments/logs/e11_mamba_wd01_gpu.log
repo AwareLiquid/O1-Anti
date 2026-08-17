@@ -1,0 +1,13 @@
+[e11-mamba] GPU run: pairs 8 16, seeds 0 1, 12000 steps, wd=0.1
+[transformers] The fast path is not available because one of `(selective_state_update, selective_scan_fn, causal_conv1d_fn, causal_conv1d_update, mamba_inner_fn)` is None. Falling back to the sequential implementation of Mamba, as use_mambapy is set to False. To install follow https://github.com/state-spaces/mamba/#installation for mamba-ssm and install the kernels library using `pip install kernels` or https://github.com/Dao-AILab/causal-conv1d for causal-conv1d. For the mamba.py backend, follow https://github.com/alxndrTL/mamba.py.
+E11 MQAR: NLA vs SSM | device=cuda pairs=[8, 16] seeds=[0, 1] archs=['mamba']
+
+--- 8 key-value pairs (seq_len 32) ---
+    [mamba P=8 seed=0] step 1500/12000 loss 2.2062 acc 0.173
+    [mamba P=8 seed=0] step 3000/12000 loss 2.1392 acc 0.165
+    [mamba P=8 seed=0] step 4500/12000 loss 2.1057 acc 0.167
+    [mamba P=8 seed=0] step 6000/12000 loss 2.0931 acc 0.162
+    [mamba P=8 seed=0] step 7500/12000 loss 1.3312 acc 0.433
+    [mamba P=8 seed=0] step 9000/12000 loss 0.3782 acc 0.854
+    [mamba P=8 seed=0] step 10500/12000 loss 0.0861 acc 0.968
+[e11-mamba] exit=127

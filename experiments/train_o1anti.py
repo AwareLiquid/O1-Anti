@@ -51,8 +51,10 @@ def load_text(source: str) -> tuple[str, str]:
     otherwise it is treated as a path to a UTF-8 text file (90/10 split)."""
     if source == "wikitext":
         from datasets import load_dataset
-        tr = load_dataset("wikitext", "wikitext-2-raw-v1", split="train")
-        va = load_dataset("wikitext", "wikitext-2-raw-v1", split="validation")
+        # "Salesforce/wikitext" (namespaced): datasets >= 4.x rejects the bare
+        # "wikitext" alias, and the offline cache lives under Salesforce___wikitext.
+        tr = load_dataset("Salesforce/wikitext", "wikitext-2-raw-v1", split="train")
+        va = load_dataset("Salesforce/wikitext", "wikitext-2-raw-v1", split="validation")
         join = lambda ds: "".join(t for t in ds["text"] if t.strip())
         return join(tr), join(va)
     text = Path(source).read_text(encoding="utf-8")

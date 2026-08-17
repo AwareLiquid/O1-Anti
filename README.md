@@ -7,7 +7,7 @@
 **Attack the three cost roots of the Transformer — one architectural pillar each.**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-18_passing-brightgreen?style=for-the-badge)](tests/test_o1anti.py)
+[![Tests](https://img.shields.io/badge/tests-22_passing-brightgreen?style=for-the-badge)](tests/test_o1anti.py)
 
 Dynamic sparse memory · Context-routed sparse compute · Non-autoregressive generation
 
