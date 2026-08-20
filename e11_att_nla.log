@@ -1,0 +1,22 @@
+E11 MQAR: NLA vs SSM | device=cuda pairs=[8, 16, 32] seeds=[0, 1] archs=['attention', 'nla']
+
+--- 8 key-value pairs (seq_len 32) ---
+    [attention P=8 seed=0] step 1000/8000 loss 0.0010 acc 0.999
+    [attention P=8 seed=0] step 2000/8000 loss 0.0007 acc 1.000
+    [attention P=8 seed=0] step 3000/8000 loss 0.0005 acc 0.999
+    [attention P=8 seed=0] step 4000/8000 loss 0.0001 acc 1.000
+    [attention P=8 seed=0] step 5000/8000 loss 0.0004 acc 0.999
+    [attention P=8 seed=0] step 6000/8000 loss 0.0000 acc 1.000
+    [attention P=8 seed=0] step 7000/8000 loss 0.0001 acc 1.000
+    [attention P=8 seed=0] step 8000/8000 loss 0.0001 acc 1.000
+    [nla P=8 seed=0] step 1000/8000 loss 2.6075 acc 0.149
+    [nla P=8 seed=0] step 2000/8000 loss 2.3686 acc 0.157
+    [nla P=8 seed=0] step 3000/8000 loss 2.2042 acc 0.155
+    [nla P=8 seed=0] step 4000/8000 loss 0.1192 acc 0.978
+    [nla P=8 seed=0] step 5000/8000 loss 0.0003 acc 1.000
+    [nla P=8 seed=0] step 6000/8000 loss 0.0201 acc 1.000
+    [nla P=8 seed=0] step 7000/8000 loss 0.0004 acc 1.000
+    [nla P=8 seed=0] step 8000/8000 loss 0.0004 acc 1.000
+    seed=0: attention=1.000  nla=1.000
+    [attention P=8 seed=1] step 1000/8000 loss 0.0019 acc 1.000
+    [attention P=8 seed=1] step 2000/8000 loss 0.0017 acc 1.000

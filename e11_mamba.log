@@ -1,0 +1,77 @@
+E11 MQAR: NLA vs SSM | device=cuda pairs=[8, 16, 32] seeds=[0, 1] archs=['mamba']
+
+--- 8 key-value pairs (seq_len 32) ---
+/home/user/.local/lib/python3.10/site-packages/tvm_ffi/_optional_torch_c_dlpack.py:181: UserWarning: Failed to JIT torch c dlpack extension, EnvTensorAllocator will not be enabled.
+We recommend installing via `pip install torch-c-dlpack-ext`
+  warnings.warn(
+/home/user/.local/lib/python3.10/site-packages/tvm_ffi/_optional_torch_c_dlpack.py:181: UserWarning: Failed to JIT torch c dlpack extension, EnvTensorAllocator will not be enabled.
+We recommend installing via `pip install torch-c-dlpack-ext`
+  warnings.warn(
+The fast path is not available because one of `(selective_state_update, selective_scan_fn, causal_conv1d_fn, causal_conv1d_update, mamba_inner_fn)` is None. Falling back to the sequential implementation of Mamba, as use_mambapy is set to False. To install follow https://github.com/state-spaces/mamba/#installation for mamba-ssm and install the kernels library using `pip install kernels` or https://github.com/Dao-AILab/causal-conv1d for causal-conv1d. For the mamba.py backend, follow https://github.com/alxndrTL/mamba.py.
+    [mamba P=8 seed=0] step 500/4000 loss 2.5753 acc 0.152
+    [mamba P=8 seed=0] step 1000/4000 loss 2.4227 acc 0.164
+    [mamba P=8 seed=0] step 1500/4000 loss 2.2706 acc 0.164
+    [mamba P=8 seed=0] step 2000/4000 loss 2.1518 acc 0.157
+    [mamba P=8 seed=0] step 2500/4000 loss 2.1625 acc 0.162
+    [mamba P=8 seed=0] step 3000/4000 loss 2.1615 acc 0.162
+    [mamba P=8 seed=0] step 3500/4000 loss 2.1397 acc 0.163
+    [mamba P=8 seed=0] step 4000/4000 loss 2.1630 acc 0.145
+    seed=0: mamba=0.153
+    [mamba P=8 seed=1] step 500/4000 loss 2.7584 acc 0.167
+    [mamba P=8 seed=1] step 1000/4000 loss 2.3718 acc 0.157
+    [mamba P=8 seed=1] step 1500/4000 loss 2.3223 acc 0.165
+    [mamba P=8 seed=1] step 2000/4000 loss 2.1941 acc 0.178
+    [mamba P=8 seed=1] step 2500/4000 loss 2.1410 acc 0.157
+    [mamba P=8 seed=1] step 3000/4000 loss 2.1861 acc 0.166
+    [mamba P=8 seed=1] step 3500/4000 loss 2.0643 acc 0.147
+    [mamba P=8 seed=1] step 4000/4000 loss 2.0870 acc 0.167
+    seed=1: mamba=0.152
+
+--- 16 key-value pairs (seq_len 48) ---
+    [mamba P=16 seed=0] step 500/4000 loss 3.5574 acc 0.105
+    [mamba P=16 seed=0] step 1000/4000 loss 3.1573 acc 0.099
+    [mamba P=16 seed=0] step 1500/4000 loss 2.9661 acc 0.106
+    [mamba P=16 seed=0] step 2000/4000 loss 2.8298 acc 0.113
+    [mamba P=16 seed=0] step 2500/4000 loss 2.7887 acc 0.114
+    [mamba P=16 seed=0] step 3000/4000 loss 2.7378 acc 0.089
+    [mamba P=16 seed=0] step 3500/4000 loss 2.7508 acc 0.108
+    [mamba P=16 seed=0] step 4000/4000 loss 2.7342 acc 0.109
+    seed=0: mamba=0.105
+    [mamba P=16 seed=1] step 500/4000 loss 3.5950 acc 0.092
+    [mamba P=16 seed=1] step 1000/4000 loss 3.0943 acc 0.101
+    [mamba P=16 seed=1] step 1500/4000 loss 2.9543 acc 0.111
+    [mamba P=16 seed=1] step 2000/4000 loss 2.8304 acc 0.105
+    [mamba P=16 seed=1] step 2500/4000 loss 2.7960 acc 0.122
+    [mamba P=16 seed=1] step 3000/4000 loss 2.8293 acc 0.103
+    [mamba P=16 seed=1] step 3500/4000 loss 2.7706 acc 0.095
+    [mamba P=16 seed=1] step 4000/4000 loss 2.7878 acc 0.102
+    seed=1: mamba=0.104
+
+--- 32 key-value pairs (seq_len 80) ---
+    [mamba P=32 seed=0] step 500/4000 loss 4.1404 acc 0.025
+    [mamba P=32 seed=0] step 1000/4000 loss 3.7088 acc 0.068
+    [mamba P=32 seed=0] step 1500/4000 loss 3.6067 acc 0.081
+    [mamba P=32 seed=0] step 2000/4000 loss 3.5697 acc 0.071
+    [mamba P=32 seed=0] step 2500/4000 loss 3.4979 acc 0.070
+    [mamba P=32 seed=0] step 3000/4000 loss 3.4076 acc 0.077
+    [mamba P=32 seed=0] step 3500/4000 loss 3.3737 acc 0.068
+    [mamba P=32 seed=0] step 4000/4000 loss 3.3396 acc 0.079
+    seed=0: mamba=0.070
+    [mamba P=32 seed=1] step 500/4000 loss 4.1397 acc 0.024
+    [mamba P=32 seed=1] step 1000/4000 loss 3.7978 acc 0.070
+    [mamba P=32 seed=1] step 1500/4000 loss 3.5691 acc 0.074
+    [mamba P=32 seed=1] step 2000/4000 loss 3.5029 acc 0.077
+    [mamba P=32 seed=1] step 2500/4000 loss 3.3847 acc 0.062
+    [mamba P=32 seed=1] step 3000/4000 loss 3.3736 acc 0.067
+    [mamba P=32 seed=1] step 3500/4000 loss 3.3678 acc 0.073
+    [mamba P=32 seed=1] step 4000/4000 loss 3.2685 acc 0.070
+    seed=1: mamba=0.074
+
+ pairs      mamba (mean±std)
+     8         0.152 ± 0.001
+    16         0.104 ± 0.001
+    32         0.072 ± 0.002
+
+params: mamba=716,288
+
+go/no-go: if NLA tracks attention and beats Mamba as pairs grow, NLA has the retrieval precision an SSM's fixed state lacks — its distinctive niche (SSM-cheap cache + attention-precise recall) is real.

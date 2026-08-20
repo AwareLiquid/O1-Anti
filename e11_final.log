@@ -1,0 +1,120 @@
+e11-final: M3 done, starting E11 attention+nla wd=0.1 at Wed Aug 19 11:28:52 UTC 2026
+E11 MQAR: NLA vs SSM | device=cuda pairs=[8, 16, 32] seeds=[0, 1] archs=['attention', 'nla']
+
+--- 8 key-value pairs (seq_len 32) ---
+    [attention P=8 seed=0] step 1000/8000 loss 0.0010 acc 0.999
+    [attention P=8 seed=0] step 2000/8000 loss 0.0007 acc 1.000
+    [attention P=8 seed=0] step 3000/8000 loss 0.0005 acc 0.999
+    [attention P=8 seed=0] step 4000/8000 loss 0.0001 acc 1.000
+    [attention P=8 seed=0] step 5000/8000 loss 0.0004 acc 0.999
+    [attention P=8 seed=0] step 6000/8000 loss 0.0000 acc 1.000
+    [attention P=8 seed=0] step 7000/8000 loss 0.0001 acc 1.000
+    [attention P=8 seed=0] step 8000/8000 loss 0.0001 acc 1.000
+    [nla P=8 seed=0] step 1000/8000 loss 2.6075 acc 0.149
+    [nla P=8 seed=0] step 2000/8000 loss 2.3686 acc 0.157
+    [nla P=8 seed=0] step 3000/8000 loss 2.2042 acc 0.155
+    [nla P=8 seed=0] step 4000/8000 loss 0.1192 acc 0.978
+    [nla P=8 seed=0] step 5000/8000 loss 0.0003 acc 1.000
+    [nla P=8 seed=0] step 6000/8000 loss 0.0201 acc 1.000
+    [nla P=8 seed=0] step 7000/8000 loss 0.0004 acc 1.000
+    [nla P=8 seed=0] step 8000/8000 loss 0.0004 acc 1.000
+    seed=0: attention=1.000  nla=1.000
+    [attention P=8 seed=1] step 1000/8000 loss 0.0019 acc 1.000
+    [attention P=8 seed=1] step 2000/8000 loss 0.0017 acc 1.000
+    [attention P=8 seed=1] step 3000/8000 loss 0.0120 acc 0.996
+    [attention P=8 seed=1] step 4000/8000 loss 0.0000 acc 1.000
+    [attention P=8 seed=1] step 5000/8000 loss 0.0004 acc 0.993
+    [attention P=8 seed=1] step 6000/8000 loss 0.0000 acc 1.000
+    [attention P=8 seed=1] step 7000/8000 loss 0.0001 acc 1.000
+    [attention P=8 seed=1] step 8000/8000 loss 0.0001 acc 1.000
+    [nla P=8 seed=1] step 1000/8000 loss 2.6012 acc 0.168
+    [nla P=8 seed=1] step 2000/8000 loss 2.3207 acc 0.153
+    [nla P=8 seed=1] step 3000/8000 loss 0.0062 acc 1.000
+    [nla P=8 seed=1] step 4000/8000 loss 0.0049 acc 1.000
+    [nla P=8 seed=1] step 5000/8000 loss 0.0009 acc 0.999
+    [nla P=8 seed=1] step 6000/8000 loss 0.0004 acc 1.000
+    [nla P=8 seed=1] step 7000/8000 loss 0.0002 acc 1.000
+    [nla P=8 seed=1] step 8000/8000 loss 0.0495 acc 0.994
+    seed=1: attention=1.000  nla=0.997
+
+--- 16 key-value pairs (seq_len 48) ---
+    [attention P=16 seed=0] step 1000/8000 loss 3.0767 acc 0.100
+    [attention P=16 seed=0] step 2000/8000 loss 2.9518 acc 0.095
+    [attention P=16 seed=0] step 3000/8000 loss 2.6234 acc 0.195
+    [attention P=16 seed=0] step 4000/8000 loss 0.0002 acc 1.000
+    [attention P=16 seed=0] step 5000/8000 loss 0.0003 acc 1.000
+    [attention P=16 seed=0] step 6000/8000 loss 0.0001 acc 1.000
+    [attention P=16 seed=0] step 7000/8000 loss 0.0001 acc 1.000
+    [attention P=16 seed=0] step 8000/8000 loss 0.0001 acc 1.000
+    [nla P=16 seed=0] step 1000/8000 loss 3.3195 acc 0.087
+    [nla P=16 seed=0] step 2000/8000 loss 3.0648 acc 0.104
+    [nla P=16 seed=0] step 3000/8000 loss 2.9069 acc 0.095
+    [nla P=16 seed=0] step 4000/8000 loss 2.8439 acc 0.098
+    [nla P=16 seed=0] step 5000/8000 loss 2.7903 acc 0.109
+    [nla P=16 seed=0] step 6000/8000 loss 2.7951 acc 0.101
+    [nla P=16 seed=0] step 7000/8000 loss 2.7092 acc 0.100
+    [nla P=16 seed=0] step 8000/8000 loss 2.7256 acc 0.098
+    seed=0: attention=1.000  nla=0.095
+    [attention P=16 seed=1] step 1000/8000 loss 3.2041 acc 0.113
+    [attention P=16 seed=1] step 2000/8000 loss 2.9166 acc 0.099
+    [attention P=16 seed=1] step 3000/8000 loss 2.8984 acc 0.113
+    [attention P=16 seed=1] step 4000/8000 loss 0.0003 acc 0.999
+    [attention P=16 seed=1] step 5000/8000 loss 0.0001 acc 1.000
+    [attention P=16 seed=1] step 6000/8000 loss 0.0046 acc 1.000
+    [attention P=16 seed=1] step 7000/8000 loss 0.0001 acc 1.000
+    [attention P=16 seed=1] step 8000/8000 loss 0.0002 acc 1.000
+    [nla P=16 seed=1] step 1000/8000 loss 3.4536 acc 0.085
+    [nla P=16 seed=1] step 2000/8000 loss 2.9916 acc 0.111
+    [nla P=16 seed=1] step 3000/8000 loss 2.9352 acc 0.101
+    [nla P=16 seed=1] step 4000/8000 loss 2.7640 acc 0.135
+    [nla P=16 seed=1] step 5000/8000 loss 0.0010 acc 1.000
+    [nla P=16 seed=1] step 6000/8000 loss 0.0027 acc 0.999
+    [nla P=16 seed=1] step 7000/8000 loss 0.0004 acc 1.000
+    [nla P=16 seed=1] step 8000/8000 loss 0.0074 acc 0.992
+    seed=1: attention=1.000  nla=0.996
+
+--- 32 key-value pairs (seq_len 80) ---
+    [attention P=32 seed=0] step 1000/8000 loss 3.8341 acc 0.069
+    [attention P=32 seed=0] step 2000/8000 loss 3.5753 acc 0.082
+    [attention P=32 seed=0] step 3000/8000 loss 3.3989 acc 0.075
+    [attention P=32 seed=0] step 4000/8000 loss 3.3301 acc 0.074
+    [attention P=32 seed=0] step 5000/8000 loss 3.3434 acc 0.081
+    [attention P=32 seed=0] step 6000/8000 loss 3.2746 acc 0.076
+    [attention P=32 seed=0] step 7000/8000 loss 3.2597 acc 0.080
+    [attention P=32 seed=0] step 8000/8000 loss 3.2997 acc 0.073
+    [nla P=32 seed=0] step 1000/8000 loss 4.0559 acc 0.045
+    [nla P=32 seed=0] step 2000/8000 loss 3.8675 acc 0.068
+    [nla P=32 seed=0] step 3000/8000 loss 3.6035 acc 0.065
+    [nla P=32 seed=0] step 4000/8000 loss 3.4623 acc 0.082
+    [nla P=32 seed=0] step 5000/8000 loss 3.4151 acc 0.069
+    [nla P=32 seed=0] step 6000/8000 loss 3.2914 acc 0.068
+    [nla P=32 seed=0] step 7000/8000 loss 3.2908 acc 0.076
+    [nla P=32 seed=0] step 8000/8000 loss 3.3191 acc 0.077
+    seed=0: attention=0.073  nla=0.083
+    [attention P=32 seed=1] step 1000/8000 loss 3.7622 acc 0.063
+    [attention P=32 seed=1] step 2000/8000 loss 3.5102 acc 0.072
+    [attention P=32 seed=1] step 3000/8000 loss 3.4759 acc 0.084
+    [attention P=32 seed=1] step 4000/8000 loss 3.3580 acc 0.061
+    [attention P=32 seed=1] step 5000/8000 loss 3.3323 acc 0.074
+    [attention P=32 seed=1] step 6000/8000 loss 3.2169 acc 0.073
+    [attention P=32 seed=1] step 7000/8000 loss 3.3065 acc 0.078
+    [attention P=32 seed=1] step 8000/8000 loss 3.2595 acc 0.076
+    [nla P=32 seed=1] step 1000/8000 loss 4.0041 acc 0.043
+    [nla P=32 seed=1] step 2000/8000 loss 3.7809 acc 0.056
+    [nla P=32 seed=1] step 3000/8000 loss 3.6267 acc 0.076
+    [nla P=32 seed=1] step 4000/8000 loss 3.3995 acc 0.069
+    [nla P=32 seed=1] step 5000/8000 loss 3.3679 acc 0.063
+    [nla P=32 seed=1] step 6000/8000 loss 3.2470 acc 0.075
+    [nla P=32 seed=1] step 7000/8000 loss 3.3100 acc 0.073
+    [nla P=32 seed=1] step 8000/8000 loss 3.2644 acc 0.068
+    seed=1: attention=0.079  nla=0.071
+
+ pairs  attention (mean±std)        nla (mean±std)
+     8         1.000 ± 0.000         0.999 ± 0.001
+    16         1.000 ± 0.000         0.545 ± 0.450
+    32         0.076 ± 0.003         0.077 ± 0.006
+
+params: attention=820,096  nla=869,376
+
+go/no-go: if NLA tracks attention and beats Mamba as pairs grow, NLA has the retrieval precision an SSM's fixed state lacks — its distinctive niche (SSM-cheap cache + attention-precise recall) is real.
+e11-final: attention+nla done at Wed Aug 19 11:54:26 UTC 2026
