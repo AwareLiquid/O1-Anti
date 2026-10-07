@@ -1,0 +1,63 @@
+E11 MQAR: NLA vs SSM | device=cuda pairs=[8, 16] seeds=[0, 1, 2] archs=['mamba']
+
+--- 8 key-value pairs (seq_len 32) ---
+    [mamba P=8 seed=0] step 1000/8000 loss 2.3623 acc 0.150
+    [mamba P=8 seed=0] step 2000/8000 loss 2.1226 acc 0.156
+    [mamba P=8 seed=0] step 3000/8000 loss 0.1589 acc 0.966
+    [mamba P=8 seed=0] step 4000/8000 loss 0.0372 acc 0.994
+    [mamba P=8 seed=0] step 5000/8000 loss 0.0098 acc 0.997
+    [mamba P=8 seed=0] step 6000/8000 loss 0.0325 acc 0.996
+    [mamba P=8 seed=0] step 7000/8000 loss 0.0367 acc 0.996
+    [mamba P=8 seed=0] step 8000/8000 loss 0.0164 acc 0.994
+    seed=0: mamba=0.996
+    [mamba P=8 seed=1] step 1000/8000 loss 2.3289 acc 0.146
+    [mamba P=8 seed=1] step 2000/8000 loss 2.1423 acc 0.155
+E11 MQAR: NLA vs SSM | device=cuda pairs=[8, 16] seeds=[1, 2] archs=['mamba']
+
+--- 8 key-value pairs (seq_len 32) ---
+    [mamba P=8 seed=1] step 1000/8000 loss 2.3289 acc 0.146
+    [mamba P=8 seed=1] step 2000/8000 loss 2.1423 acc 0.155
+    [mamba P=8 seed=1] step 3000/8000 loss 0.1416 acc 0.962
+    [mamba P=8 seed=1] step 4000/8000 loss 0.0362 acc 0.994
+    [mamba P=8 seed=1] step 5000/8000 loss 0.0117 acc 0.995
+    [mamba P=8 seed=1] step 6000/8000 loss 0.0111 acc 0.994
+    [mamba P=8 seed=1] step 7000/8000 loss 0.0078 acc 0.991
+    [mamba P=8 seed=1] step 8000/8000 loss 0.0082 acc 0.997
+    seed=1: mamba=0.993
+    [mamba P=8 seed=2] step 1000/8000 loss 2.4138 acc 0.172
+    [mamba P=8 seed=2] step 2000/8000 loss 2.1516 acc 0.146
+    [mamba P=8 seed=2] step 3000/8000 loss 2.1217 acc 0.160
+    [mamba P=8 seed=2] step 4000/8000 loss 0.0331 acc 0.978
+    [mamba P=8 seed=2] step 5000/8000 loss 0.0376 acc 0.993
+    [mamba P=8 seed=2] step 6000/8000 loss 0.0385 acc 0.995
+    [mamba P=8 seed=2] step 7000/8000 loss 0.0018 acc 0.997
+    [mamba P=8 seed=2] step 8000/8000 loss 0.0151 acc 0.995
+    seed=2: mamba=0.995
+
+--- 16 key-value pairs (seq_len 48) ---
+    [mamba P=16 seed=1] step 1000/8000 loss 3.2020 acc 0.113
+    [mamba P=16 seed=1] step 2000/8000 loss 2.8748 acc 0.106
+    [mamba P=16 seed=1] step 3000/8000 loss 2.5928 acc 0.152
+    [mamba P=16 seed=1] step 4000/8000 loss 2.5620 acc 0.184
+    [mamba P=16 seed=1] step 5000/8000 loss 0.7413 acc 0.754
+    [mamba P=16 seed=1] step 6000/8000 loss 0.0732 acc 0.975
+    [mamba P=16 seed=1] step 7000/8000 loss 0.0705 acc 0.986
+    [mamba P=16 seed=1] step 8000/8000 loss 0.0147 acc 0.990
+    seed=1: mamba=0.990
+    [mamba P=16 seed=2] step 1000/8000 loss 3.1835 acc 0.118
+    [mamba P=16 seed=2] step 2000/8000 loss 2.8434 acc 0.107
+    [mamba P=16 seed=2] step 3000/8000 loss 2.7526 acc 0.098
+    [mamba P=16 seed=2] step 4000/8000 loss 2.7723 acc 0.104
+    [mamba P=16 seed=2] step 5000/8000 loss 2.6855 acc 0.096
+    [mamba P=16 seed=2] step 6000/8000 loss 0.1952 acc 0.933
+    [mamba P=16 seed=2] step 7000/8000 loss 0.0805 acc 0.985
+    [mamba P=16 seed=2] step 8000/8000 loss 0.0332 acc 0.983
+    seed=2: mamba=0.991
+
+ pairs      mamba (mean±std)
+     8         0.994 ± 0.001
+    16         0.990 ± 0.000
+
+params: mamba=716,288
+
+go/no-go: if NLA tracks attention and beats Mamba as pairs grow, NLA has the retrieval precision an SSM's fixed state lacks — its distinctive niche (SSM-cheap cache + attention-precise recall) is real.
