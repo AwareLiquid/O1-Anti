@@ -38,7 +38,7 @@ Full design and derivations: [`O1ANTI_ARCHITECTURE.md`](O1ANTI_ARCHITECTURE.md).
 | **P4** integration | All three pillars in one trained model | 1.000 generated at **74% activation, 7 passes vs 48** | **GO** |
 | **E8** real text | Byte-level LM on WikiText-2 vs matched dense | **+22% BPB behind** dense (3.51 vs 2.87) | **GAP** |
 | **E10** real text | Needle retrieval in real WikiText, 2 seeds/length | **RETRACTED** — the NLA "win" was a weight-decay artifact; at `wd=0.1` (both models regularized) it's a wash (L=128 dense 0.74 vs NLA 0.67, both bimodal) | **INCONCLUSIVE** |
-| **E11** recall | MQAR: NLA vs attention vs Mamba (SSM) | at `wd=0.1` NLA **1.000 = attention** (pairs 8, 16, multi-seed) — *matches* the ceiling at lower cache; Mamba comparison not yet clean (was `wd=0.01`) | **GO (parity)** |
+| **E11** recall | MQAR: NLA vs attention vs Mamba (SSM) — fair `wd=0.1` GPU rerun, equal 8k-step budget (2026-10-12) | **NLA 1.000 = attention** on pairs 8 (2 seeds); Mamba is budget-sensitive (0.735 / 0.987 in this rerun; 0.994 in a longer earlier run) — its earlier “0.07–0.10” reading was an under-regularized `wd=0.01` 4k-step artifact | **GO (parity)** |
 
 The four synthetic go/no-go tests (P1–P4) all pass, and the pillars **compose** in
 one end-to-end model. The real-text and recall probes are more sobering, and a
@@ -52,12 +52,16 @@ buried):
   properly regularized (`wd=0.1`) erases the gap — L=128 becomes a bimodal wash
   (dense 0.74 vs NLA 0.67), L=512 both fail to grok in budget. NLA's apparent
   real-text retrieval advantage does **not** survive a fair comparison.
-- **E11 (associative recall, MQAR):** the one clean positive. At `wd=0.1` NLA
-  reliably reaches **attention-level** recall (1.000 at pairs 8 and 16, multiple
-  seeds, cross-validated) — it *matches* the ceiling, at a fraction of the cache.
-  It does not *exceed* attention; the value is parity-quality at lower cache cost.
-  (The Mamba comparison is not yet clean — Mamba was at `wd=0.01`; needs a GPU
-  re-run.)
+- **E11 (associative recall, MQAR):** the one clean positive, now with a fair
+  three-way comparison (`wd=0.1`, equal 8k-step budget, GPU rerun 2026-10-12):
+  attention and NLA both reach **1.000** on pairs 8 across two seeds; Mamba,
+  trained identically, is budget-sensitive (0.735 and 0.987 in this rerun; 0.994
+  in an earlier longer run) — the earlier “Mamba 0.07–0.10” figure came from an
+  under-regularized `wd=0.01` run at a 4k-step budget (0.10–0.15 at pairs 8–16),
+  not from a fair comparison. NLA does not *exceed* attention; the value is
+  parity-quality at a fraction of the cache. At pairs 16 the probe is
+  seed-variance-dominated (earlier run: attention 1.000, NLA 0.095/0.996), and at
+  32 pairs even attention collapses within 8k steps (0.076).
 
 **Honest current read:** the strongest supported claim is *NLA matches attention
 on synthetic content-recall at ~6–8× smaller cache* (E11 + the analytic cache
